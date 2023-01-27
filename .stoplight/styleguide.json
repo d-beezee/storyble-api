@@ -2,21 +2,12 @@
   "name": "Storyble API",
   "description": "",
   "spectralExtends": [],
-  "extends": [
-    "cHJqOjEyMzU4Ng"
-  ],
-  "formats": [
-    "oas2",
-    "oas3",
-    "oas3.0",
-    "oas3.1"
-  ],
+  "extends": ["cHJqOjEyMzU4Ng"],
+  "formats": ["oas2", "oas3", "oas3.0", "oas3.1"],
   "aliases": {},
   "rules": {
     "path-parameter-camel-case": {
-      "given": [
-        "#Request_Parameter_Path"
-      ],
+      "given": ["#Request_Parameter_Path"],
       "severity": "error",
       "then": {
         "function": "casing",
@@ -28,16 +19,15 @@
       "name": "path-parameter-camel-case"
     },
     "path-camel-case": {
-      "given": [
-        "#Path_Item"
-      ],
+      "given": ["#Path_Item"],
       "severity": "error",
       "then": {
         "function": "casing",
         "functionOptions": {
           "disallowDigits": true,
           "type": "camel"
-        }
+        },
+        "field": "name"
       },
       "name": "path-camel-case"
     }
