@@ -273,18 +273,18 @@
       "given": [
         "#Request_Parameter_Path"
       ],
-      "severity": "error",
+      "severity": "error",s
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "snake",
+          "type": "camel",
           "disallowDigits": true
         },
         "field": "name"
       },
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
-      "name": "path-parameters-snake-case",
-      "message": "Path parameters should be snake_case and not contain digits"
+      "name": "path-parameters-camel-case",
+      "message": "Path parameters should be camelCase and not contain digits"
     },
     {
       "given": [
@@ -294,13 +294,13 @@
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "snake",
+          "type": "camel",
           "disallowDigits": true
         }
       },
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
-      "name": "query-parameters-snake-case",
-      "message": "Query parameters should be snake_case and not contain digits"
+      "name": "query-parameters-camel-case",
+      "message": "Query parameters should be camelCase and not contain digits"
     },
     {
       "given": [
@@ -746,10 +746,10 @@
             },
             "field": "name"
           },
-          "name": "path-parameters-snake-case",
+          "name": "path-parameters-camel-case",
           "message": "Path parameters should be camelCase and not contain digits"
         },
-        "query-parameters-snake-case": {
+        "query-parameters-camel-case": {
           "given": [
             "#Request_Parameter_Query"
           ],
@@ -761,7 +761,7 @@
               "disallowDigits": true
             }
           },
-          "name": "query-parameters-snake-case",
+          "name": "query-parameters-camel-case",
           "message": "Query parameters should be camelCase and not contain digits"
         },
         "path-parameters-on-path-only": {
