@@ -1,10 +1,11 @@
 {
   "name": "Spectral Example",
   "description": "",
+  "spectralExtends": [],
+  "extends": ["cHJqOjEzNDcyMQ@10"],
   "formats": ["oas2", "oas3", "oas3.0", "oas3.1"],
   "aliases": {},
   "rules": {},
-  "extends": ["cHJqOjEzNDcyMQ@10"],
   "extendedStyleguides": [
     {
       "id": "cHJqOjEzNDcyMQ",
@@ -594,7 +595,7 @@
           "name": "path-parameters-snake-case",
           "message": "Path parameters should be camelCase and not contain digits"
         },
-        "query-parameters-camel-case": {
+        "query-parameters-snake-case": {
           "given": ["#Request_Parameter_Query"],
           "severity": "error",
           "then": {
