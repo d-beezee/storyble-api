@@ -2,12 +2,21 @@
   "name": "Storyble API",
   "description": "",
   "spectralExtends": [],
-  "extends": ["cHJqOjEyMzU4Ng"],
-  "formats": ["oas2", "oas3", "oas3.0", "oas3.1"],
+  "extends": [
+    "cHJqOjEyMzU4Ng"
+  ],
+  "formats": [
+    "oas2",
+    "oas3",
+    "oas3.0",
+    "oas3.1"
+  ],
   "aliases": {},
   "rules": {
     "path-parameter-camel-case": {
-      "given": ["#Request_Parameter_Path"],
+      "given": [
+        "$.paths..parameters..name"
+      ],
       "severity": "error",
       "then": {
         "function": "casing",
@@ -16,20 +25,22 @@
           "type": "camel"
         }
       },
-      "name": "path-parameter-camel-case"
+      "name": "path-parameter-camel-case",
+      "message": "Path parameter {{value}} {{error}}"
     },
     "path-camel-case": {
-      "given": ["#Path_Item"],
+      "given": [
+        "$.paths[*]~"
+      ],
       "severity": "error",
       "then": {
-        "function": "casing",
+        "function": "pattern",
         "functionOptions": {
-          "disallowDigits": true,
-          "type": "camel"
-        },
-        "field": "name"
+          "match": "^(\\/([a-z]|[A-Z0-9])[a-z]*)+$"
+        }
       },
-      "name": "path-camel-case"
+      "name": "path-camel-case",
+      "message": "{{property}} must be camelCase"
     }
   },
   "extendedStyleguides": [
