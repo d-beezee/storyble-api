@@ -2,8 +2,15 @@
   "name": "Spectral Example",
   "description": "",
   "spectralExtends": [],
-  "extends": ["cHJqOjEzNDcyMQ@10"],
-  "formats": ["oas2", "oas3", "oas3.0", "oas3.1"],
+  "extends": [
+    "cHJqOjEzNDcyMQ@10"
+  ],
+  "formats": [
+    "oas2",
+    "oas3",
+    "oas3.0",
+    "oas3.1"
+  ],
   "aliases": {},
   "rules": {},
   "extendedStyleguides": [
@@ -24,7 +31,9 @@
   ],
   "inheritedRules": [
     {
-      "given": ["$.servers[*].url"],
+      "given": [
+        "$.servers[*].url"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -35,24 +44,34 @@
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "oas3-always-use-https",
       "message": "Servers must use the HTTPS protocol except when using localhost",
-      "formats": ["oas3"]
+      "formats": [
+        "oas3"
+      ]
     },
     {
-      "given": ["$.schemes.*"],
+      "given": [
+        "$.schemes.*"
+      ],
       "severity": "warn",
       "then": {
         "function": "enumeration",
         "functionOptions": {
-          "values": ["https"]
+          "values": [
+            "https"
+          ]
         }
       },
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "oas2-always-use-https",
       "message": "Servers must use the HTTPS protocol",
-      "formats": ["oas2"]
+      "formats": [
+        "oas2"
+      ]
     },
     {
-      "given": ["$.servers[*].url"],
+      "given": [
+        "$.servers[*].url"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -63,10 +82,14 @@
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-lowercase",
       "message": "Server URL must be lowercase",
-      "formats": ["oas3"]
+      "formats": [
+        "oas3"
+      ]
     },
     {
-      "given": ["$.servers[*].url"],
+      "given": [
+        "$.servers[*].url"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -77,10 +100,14 @@
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-has-api",
       "message": "Server must have /api",
-      "formats": ["oas3"]
+      "formats": [
+        "oas3"
+      ]
     },
     {
-      "given": ["$.servers[*].url"],
+      "given": [
+        "$.servers[*].url"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -91,10 +118,14 @@
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-version",
       "message": "Server must end with a version",
-      "formats": ["oas3"]
+      "formats": [
+        "oas3"
+      ]
     },
     {
-      "given": ["$.servers[*].url"],
+      "given": [
+        "$.servers[*].url"
+      ],
       "severity": "off",
       "then": {
         "function": "pattern",
@@ -105,10 +136,14 @@
       "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-major-version-only",
       "message": "Server should only have major versions",
-      "formats": ["oas3"]
+      "formats": [
+        "oas3"
+      ]
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -122,7 +157,9 @@
       "message": "Paths must be kebab-case"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "warn",
       "then": {
         "function": "pattern",
@@ -136,7 +173,9 @@
       "message": "Resource names should generally be plural"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -150,7 +189,9 @@
       "message": "Paths must not end with a trailing slash"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -164,7 +205,9 @@
       "message": "Paths must not have file extensions"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "error",
       "then": {
         "function": "pattern",
@@ -178,7 +221,9 @@
       "message": "Paths must not have HTTP verbs in them"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "off",
       "then": {
         "function": "pattern",
@@ -192,7 +237,9 @@
       "message": "Paths must have a version in them"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "warn",
       "then": {
         "function": "pattern",
@@ -207,7 +254,9 @@
       "message": "Avoid using special characters in paths"
     },
     {
-      "given": ["$.paths"],
+      "given": [
+        "$.paths"
+      ],
       "severity": "warn",
       "then": {
         "function": "pattern",
@@ -221,7 +270,9 @@
       "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
     },
     {
-      "given": ["#Request_Parameter_Path"],
+      "given": [
+        "#Request_Parameter_Path"
+      ],
       "severity": "error",
       "then": {
         "function": "casing",
@@ -236,7 +287,9 @@
       "message": "Path parameters should be snake_case and not contain digits"
     },
     {
-      "given": ["#Request_Parameter_Query"],
+      "given": [
+        "#Request_Parameter_Query"
+      ],
       "severity": "error",
       "then": {
         "function": "casing",
@@ -250,7 +303,9 @@
       "message": "Query parameters should be snake_case and not contain digits"
     },
     {
-      "given": ["$.paths[*][*].parameters[?(@.in == 'path')]"],
+      "given": [
+        "$.paths[*][*].parameters[?(@.in == 'path')]"
+      ],
       "severity": "warn",
       "then": {
         "function": "falsy"
@@ -260,7 +315,9 @@
       "message": "Path parameters should be defined on the path level instead of the operation level."
     },
     {
-      "given": ["$.paths~"],
+      "given": [
+        "$.paths~"
+      ],
       "severity": "warn",
       "then": {
         "function": "truthy",
@@ -277,27 +334,39 @@
       "name": "Request_Parameter_Query",
       "targets": [
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.paths[*].parameters[?(@.in == 'query')].name"
         },
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
         },
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.components.parameters[?(@.in == 'query')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.paths[*].parameters[?(@.in == 'query')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.components.parameters[?(@.in == 'query')].name"
         }
       ]
@@ -307,27 +376,39 @@
       "name": "Request_Parameter_Path",
       "targets": [
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.paths[*].parameters[?(@.in == 'path')].name"
         },
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
         },
         {
-          "formats": ["oas3"],
+          "formats": [
+            "oas3"
+          ],
           "given": "$.components.parameters[?(@.in == 'path')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.paths[*].parameters[?(@.in == 'path')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
         },
         {
-          "formats": ["oas2"],
+          "formats": [
+            "oas2"
+          ],
           "given": "$.components.parameters[?(@.in == 'path')].name"
         }
       ]
@@ -336,33 +417,50 @@
   "library": {
     "cHJqOjEzNDcyMQ@10": {
       "description": "",
-      "formats": ["oas2", "oas3", "oas3.0", "oas3.1"],
+      "formats": [
+        "oas2",
+        "oas3",
+        "oas3.0",
+        "oas3.1"
+      ],
       "aliases": {
         "Request_Parameter_Query": {
           "name": "Request_Parameter_Query",
           "targets": [
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.paths[*].parameters[?(@.in == 'query')].name"
             },
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
             },
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.components.parameters[?(@.in == 'query')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.paths[*].parameters[?(@.in == 'query')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.components.parameters[?(@.in == 'query')].name"
             }
           ]
@@ -371,27 +469,39 @@
           "name": "Request_Parameter_Path",
           "targets": [
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.paths[*].parameters[?(@.in == 'path')].name"
             },
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
             },
             {
-              "formats": ["oas3"],
+              "formats": [
+                "oas3"
+              ],
               "given": "$.components.parameters[?(@.in == 'path')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.paths[*].parameters[?(@.in == 'path')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
             },
             {
-              "formats": ["oas2"],
+              "formats": [
+                "oas2"
+              ],
               "given": "$.components.parameters[?(@.in == 'path')].name"
             }
           ]
@@ -399,7 +509,9 @@
       },
       "rules": {
         "oas3-always-use-https": {
-          "given": ["$.servers[*].url"],
+          "given": [
+            "$.servers[*].url"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -409,23 +521,33 @@
           },
           "name": "oas3-always-use-https",
           "message": "Servers must use the HTTPS protocol except when using localhost",
-          "formats": ["oas3"]
+          "formats": [
+            "oas3"
+          ]
         },
         "oas2-always-use-https": {
-          "given": ["$.schemes.*"],
+          "given": [
+            "$.schemes.*"
+          ],
           "severity": "warn",
           "then": {
             "function": "enumeration",
             "functionOptions": {
-              "values": ["https"]
+              "values": [
+                "https"
+              ]
             }
           },
           "name": "oas2-always-use-https",
           "message": "Servers must use the HTTPS protocol",
-          "formats": ["oas2"]
+          "formats": [
+            "oas2"
+          ]
         },
         "server-lowercase": {
-          "given": ["$.servers[*].url"],
+          "given": [
+            "$.servers[*].url"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -435,10 +557,14 @@
           },
           "name": "server-lowercase",
           "message": "Server URL must be lowercase",
-          "formats": ["oas3"]
+          "formats": [
+            "oas3"
+          ]
         },
         "server-has-api": {
-          "given": ["$.servers[*].url"],
+          "given": [
+            "$.servers[*].url"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -448,10 +574,14 @@
           },
           "name": "server-has-api",
           "message": "Server must have /api",
-          "formats": ["oas3"]
+          "formats": [
+            "oas3"
+          ]
         },
         "server-version": {
-          "given": ["$.servers[*].url"],
+          "given": [
+            "$.servers[*].url"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -461,10 +591,14 @@
           },
           "name": "server-version",
           "message": "Server must end with a version",
-          "formats": ["oas3"]
+          "formats": [
+            "oas3"
+          ]
         },
         "server-major-version-only": {
-          "given": ["$.servers[*].url"],
+          "given": [
+            "$.servers[*].url"
+          ],
           "severity": "off",
           "then": {
             "function": "pattern",
@@ -474,10 +608,14 @@
           },
           "name": "server-major-version-only",
           "message": "Server should only have major versions",
-          "formats": ["oas3"]
+          "formats": [
+            "oas3"
+          ]
         },
         "path-casing": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -490,7 +628,9 @@
           "message": "Paths must be kebab-case"
         },
         "resource-names-plural": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "warn",
           "then": {
             "function": "pattern",
@@ -503,7 +643,9 @@
           "message": "Resource names should generally be plural"
         },
         "paths-no-trailing-slash": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -516,7 +658,9 @@
           "message": "Paths must not end with a trailing slash"
         },
         "paths-no-file-extensions": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -529,7 +673,9 @@
           "message": "Paths must not have file extensions"
         },
         "paths-no-http-verbs": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "error",
           "then": {
             "function": "pattern",
@@ -542,7 +688,9 @@
           "message": "Paths must not have HTTP verbs in them"
         },
         "paths-version-number": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "off",
           "then": {
             "function": "pattern",
@@ -555,7 +703,9 @@
           "message": "Paths must have a version in them"
         },
         "paths-avoid-special-characters": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "warn",
           "then": {
             "function": "pattern",
@@ -569,7 +719,9 @@
           "message": "Avoid using special characters in paths"
         },
         "paths-no-query-params": {
-          "given": ["$.paths"],
+          "given": [
+            "$.paths"
+          ],
           "severity": "warn",
           "then": {
             "function": "pattern",
@@ -582,7 +734,9 @@
           "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
         },
         "path-parameters-camel-case": {
-          "given": ["#Request_Parameter_Path"],
+          "given": [
+            "#Request_Parameter_Path"
+          ],
           "severity": "error",
           "then": {
             "function": "casing",
@@ -596,7 +750,9 @@
           "message": "Path parameters should be camelCase and not contain digits"
         },
         "query-parameters-snake-case": {
-          "given": ["#Request_Parameter_Query"],
+          "given": [
+            "#Request_Parameter_Query"
+          ],
           "severity": "error",
           "then": {
             "function": "casing",
@@ -609,7 +765,9 @@
           "message": "Query parameters should be camelCase and not contain digits"
         },
         "path-parameters-on-path-only": {
-          "given": ["$.paths[*][*].parameters[?(@.in == 'path')]"],
+          "given": [
+            "$.paths[*][*].parameters[?(@.in == 'path')]"
+          ],
           "severity": "warn",
           "then": {
             "function": "falsy"
@@ -618,7 +776,9 @@
           "message": "Path parameters should be defined on the path level instead of the operation level."
         },
         "status-path-defined": {
-          "given": ["$.paths~"],
+          "given": [
+            "$.paths~"
+          ],
           "severity": "warn",
           "then": {
             "function": "truthy",
